@@ -70,7 +70,7 @@ export default function ProgressSection({ taskId, onComplete }: ProgressSectionP
 
     const fetchProgress = async () => {
       try {
-        const response = await fetch(`${API_BASE_URL}/scraping-progress/${taskId}`, {
+        const response = await fetch(`${API_BASE_URL}/scraping/scraping-progress/${taskId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

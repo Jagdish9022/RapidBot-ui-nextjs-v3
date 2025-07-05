@@ -13,7 +13,7 @@ function ChatBotWrapper() {
   return (
     <div className="min-h-screen flex items-center justify-center" style={{ background: "transparent" }}>
       <div className="w-full max-w-md" style={{ background: "transparent" }}>
-        <ChatBot collectionName={collectionName} apiUrl={`${API_BASE_URL}/ask-question`} />
+        <ChatBot collectionName={collectionName} apiUrl={`${API_BASE_URL}/questions/ask-question`} />
       </div>
     </div>
   )

@@ -102,7 +102,7 @@ export default function InputSection({ onStartProcessing, userId }: InputSection
       const collectionName = generateCollectionName(chatbotName, userId)
 
       // First, process the website URL
-      const response = await fetch(`${API_BASE_URL}/scrape-and-ingest`, {
+      const response = await fetch(`${API_BASE_URL}/scraping/scrape-and-ingest`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -158,7 +158,7 @@ export default function InputSection({ onStartProcessing, userId }: InputSection
       formData.append("collection_name", collectionName)
 
       try {
-        const response = await fetch(`${API_BASE_URL}/upload-and-process`, {
+        const response = await fetch(`${API_BASE_URL}/files/upload-and-process`, {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,

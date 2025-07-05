@@ -112,7 +112,7 @@ export default function ChatbotSidebar({ userId, onCreateNew, onSelectChatbot, s
   const fetchUserChatbots = async () => {
     try {
       const token = localStorage.getItem("authToken")
-      const response = await fetch(`${API_BASE_URL}/user/chatbots`, {
+      const response = await fetch(`${API_BASE_URL}/chatbots/user/chatbots`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
