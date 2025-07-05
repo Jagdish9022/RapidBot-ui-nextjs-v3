@@ -23,7 +23,7 @@ interface ChatBotProps {
 
 const ChatBot: React.FC<ChatBotProps> = ({
   collectionName = "baapcompany",
-  apiUrl = `${API_BASE_URL}/ask-question`,
+  apiUrl = `${API_BASE_URL}/questions/ask-question`,
 }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState<Message[]>([
@@ -482,7 +482,7 @@ const ChatBot: React.FC<ChatBotProps> = ({
                 <Bot className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-semibold text-base">BAAP AI</h3>
+                <h3 className="font-semibold text-base">RapidBot</h3>
                 <p className="text-xs text-white/80">Always here to help</p>
               </div>
             </div>

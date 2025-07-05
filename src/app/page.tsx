@@ -32,12 +32,12 @@ export default function HomePage() {
 
           <div className="flex items-center space-x-3 px-4 py-2">
             <img
-              src="image.png"
+              src="image5.png"
               alt="BAAP AI Logo"
               className="w-8 h-8 md:w-10 md:h-10 object-contain"
             />
             <h1 className="text-[1.19rem] md:text-[1.325rem] font-bold text-white tracking-wide font-afacad-flux">
-              BAAP <span className="text-blue-100">AI</span>
+              RapidBot
             </h1>
 
           </div>

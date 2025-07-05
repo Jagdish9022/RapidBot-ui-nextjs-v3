@@ -53,7 +53,7 @@ export default function DashboardPage() {
     if (currentTaskId && showLoader && !isCancelling) {
       const checkProgress = async () => {
         try {
-          const response = await fetch(`${API_BASE_URL}/scraping-progress/${currentTaskId}`, {
+          const response = await fetch(`${API_BASE_URL}/scraping/scraping-progress/${currentTaskId}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -127,7 +127,7 @@ export default function DashboardPage() {
     const token = localStorage.getItem("authToken")
 
     try {
-      const response = await fetch(`${API_BASE_URL}/stop-and-store-scraping/${currentTaskId}`, {
+      const response = await fetch(`${API_BASE_URL}/scraping/stop-and-store-scraping/${currentTaskId}`, {
         method: 'POST',
         headers: {
           'accept': 'application/json',
@@ -181,7 +181,7 @@ export default function DashboardPage() {
     const token = localStorage.getItem("authToken")
 
     try {
-      const response = await fetch(`${API_BASE_URL}/stop-scraping/${currentTaskId}`, {
+      const response = await fetch(`${API_BASE_URL}/scraping/stop-scraping/${currentTaskId}`, {
         method: 'POST',
         headers: {
           'accept': 'application/json',
@@ -303,7 +303,7 @@ export default function DashboardPage() {
                 <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-3xl">🤖</span>
                 </div>
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">Welcome to BAAP AI</h2>
+                <h2 className="text-2xl font-bold text-gray-800 mb-4">Welcome to RapidBot</h2>
                 <p className="text-gray-600 mb-6 max-w-md">
                   Select a chatbot from the sidebar to view details, or create a new one to get started.
                 </p>

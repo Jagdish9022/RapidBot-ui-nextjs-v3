@@ -48,7 +48,7 @@ export default function FileUploadSection({ userId, onStartProcessing }: FileUpl
         formData.append("collection_name", userId) // Ensure files are added to the user's collection
 
         try {
-          const response = await fetch(`${API_BASE_URL}/upload-and-process`, {
+          const response = await fetch(`${API_BASE_URL}/files/upload-and-process`, {
             method: "POST",
             headers: {
               Authorization: `Bearer ${token}`,

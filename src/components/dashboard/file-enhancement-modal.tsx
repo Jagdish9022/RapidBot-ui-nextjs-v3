@@ -54,7 +54,7 @@ export default function FileEnhancementModal({
         formData.append("collection_name", collectionName)
 
         try {
-          const response = await fetch(`${API_BASE_URL}/upload-and-process`, {
+          const response = await fetch(`${API_BASE_URL}/files/upload-and-process`, {
             method: "POST",
             headers: {
               Authorization: `Bearer ${token}`,
